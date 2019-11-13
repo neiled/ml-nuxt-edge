@@ -7,7 +7,7 @@
 <script lang="ts">
 import { shuffle } from 'lodash';
 import Vue from 'vue';
-import cards from '@/assets/cards';
+import getCards from '@/assets/cards';
 import Card from '@/components/Card.vue';
 
 export default Vue.extend({
@@ -15,7 +15,7 @@ export default Vue.extend({
   data() {
     return {
       current_card: 0,
-      messages: shuffle(cards),
+      messages: shuffle(getCards()),
       current_message: 'New Game'
     };
   },
