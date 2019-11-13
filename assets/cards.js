@@ -1,11 +1,19 @@
-import db from '@/middleware/db';
+// import db from '@/middleware/db';
+// const Sequelize = require('sequelize');
 
-async function getCards() {
-  const cards = ['wake up on the couch', 'wake up on the side of the road'];
-
-  const result = await db.query('SELECT * FROM cards;');
-  console.log(result);
-
-  return cards;
-}
-export default getCards;
+// const Model = Sequelize.Model;
+// class CardEntry extends Model {}
+// CardEntry.init(
+//   {
+//     message: {
+//       type: Sequelize.STRING,
+//       allowNull: false
+//     }
+//   },
+//   {
+//     sequelize: db,
+//     modelName: 'Card'
+//     // options
+//   }
+// );
+// export default CardEntry;

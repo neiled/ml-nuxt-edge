@@ -50,6 +50,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  serverMiddleware: [{ path: '/api/cards', handler: '~/api/cards.js' }],
   /*
    ** Build configuration
    */
