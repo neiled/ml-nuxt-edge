@@ -1,14 +1,14 @@
 <template>
-  <b-container>
-    <b-row>
+  <div>
+    <b-container>
       <CardDeck :cards="cards" />
-    </b-row>
-    <b-row>
-      <b-card class="mx-auto">
+    </b-container>
+    <b-container>
+      <b-card>
         <b-link class="btn btn-primary" to="/AddCard">Add Card</b-link>
       </b-card>
-    </b-row>
-  </b-container>
+    </b-container>
+  </div>
 </template>
 
 <script>
