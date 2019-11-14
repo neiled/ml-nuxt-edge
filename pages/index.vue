@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row>
-      <CardDeck />
+      <CardDeck :cards="cards" />
     </b-row>
   </b-container>
 </template>
@@ -16,10 +16,14 @@ export default {
   components: {
     CardDeck
   },
+  data() {
+    return {};
+  },
   async asyncData() {
     consola.info('fetch');
     const res = await axios.get('http://localhost:3000/api/cards');
-    consola.info(res.data);
+    consola.info(res.data.cards);
+    return { cards: res.data.cards };
   }
 };
 </script>

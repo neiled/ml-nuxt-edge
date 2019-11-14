@@ -20,9 +20,10 @@ CardEntry.init(
 export default {
   path: '/api/cards',
   async handler(req, res) {
-    const cards = await CardEntry.findAll();
-    consola.info(cards);
+    const cards = await CardEntry.findAll({ attributes: ['message'] });
+    const result = { cards: cards.map((x) => x.message) };
+    consola.info(result);
 
-    res.end('Everything ok!');
+    res.end(JSON.stringify(result));
   }
 };

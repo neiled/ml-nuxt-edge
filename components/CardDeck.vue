@@ -14,10 +14,16 @@ const consola = require('consola');
 
 export default {
   components: { Card },
+  props: {
+    cards: {
+      type: Array,
+      default: () => []
+    }
+  },
   data() {
     return {
       current_card: 0,
-      messages: [], // shuffle(CardEntry.findAll({ attributes: ['message'] })),
+      messages: this.cards,
       current_message: 'New Game'
     };
   },
