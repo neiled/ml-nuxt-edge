@@ -21,8 +21,8 @@ export default {
   },
   async asyncData() {
     consola.info('fetch');
-    const url = process.env.HOST || 'localhost:3000';
-    const res = await axios.get('http://' + url + '/api/cards');
+    const url = process.env.URL || 'http://localhost:3000';
+    const res = await axios.get(url + '/api/cards');
     consola.info(res.data.cards);
     return { cards: res.data.cards };
   }
