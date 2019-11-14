@@ -16,6 +16,7 @@
           ></b-form-input>
 
           <b-button type="submit" variant="primary">Add</b-button>
+          <b-link to="/" class="btn btn-danger">Cancel</b-link>
         </b-form>
       </b-col>
     </b-row>
