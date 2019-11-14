@@ -3,6 +3,9 @@
     <b-row>
       <CardDeck :cards="cards" />
     </b-row>
+    <b-row>
+      <nuxt-link to="/AddCard">Add Card</nuxt-link>
+    </b-row>
   </b-container>
 </template>
 
