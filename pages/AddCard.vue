@@ -1,16 +1,18 @@
 <template>
   <b-container>
-    <b-form @submit="onSubmit">
-      <b-form-input
-        id="input-message"
-        v-model="form.message"
-        type="text"
-        required
-        placeholder="Who is most likely to..."
-      ></b-form-input>
+    <b-card>
+      <b-form @submit="onSubmit">
+        <b-form-input
+          id="input-message"
+          v-model="form.message"
+          type="text"
+          required
+          placeholder="Who is most likely to..."
+        ></b-form-input>
 
-      <b-button type="submit" variant="primary">Add</b-button>
-    </b-form>
+        <b-button type="submit" variant="primary">Add</b-button>
+      </b-form>
+    </b-card>
   </b-container>
 </template>
 

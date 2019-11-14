@@ -4,7 +4,7 @@
       <CardDeck :cards="cards" />
     </b-row>
     <b-row>
-      <nuxt-link to="/AddCard">Add Card</nuxt-link>
+      <b-link class="btn btn-primary" to="/AddCard">Add Card</b-link>
     </b-row>
   </b-container>
 </template>
