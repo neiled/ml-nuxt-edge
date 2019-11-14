@@ -4,7 +4,9 @@
       <CardDeck :cards="cards" />
     </b-row>
     <b-row>
-      <b-link class="btn btn-primary" to="/AddCard">Add Card</b-link>
+      <b-card class="mx-auto">
+        <b-link class="btn btn-primary" to="/AddCard">Add Card</b-link>
+      </b-card>
     </b-row>
   </b-container>
 </template>
