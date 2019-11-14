@@ -5,10 +5,6 @@
 </template>
 
 <script lang="ts">
-// import { shuffle } from 'lodash';
-// import Vue from 'vue';
-// import CardEntry from '@/assets/cards';
-
 import Card from '@/components/Card.vue';
 const consola = require('consola');
 

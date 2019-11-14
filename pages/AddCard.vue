@@ -24,20 +24,13 @@ export default {
     };
   },
   methods: {
-    onSubmit(evt) {
+    async onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
       const url = process.env.URL || 'http://localhost:3000';
-      this.$axios.post(url + '/api/cards', { message: this.form.message });
-    },
-    onReset(evt) {
-      evt.preventDefault();
-      // Reset our form values
-      this.form.message = '';
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
+      await this.$axios.post(url + '/api/cards', {
+        message: this.form.message
       });
+      this.$router.push('/');
     }
   }
 };

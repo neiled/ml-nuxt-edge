@@ -27,12 +27,9 @@ app.get('/', async (req, res) => {
   res.end(JSON.stringify(result));
 });
 app.post('/', async (req, res) => {
-  consola.info('posted');
   consola.info(req.body.message);
   await CardEntry.create({
     message: req.body.message
-    // createdAt: new Date(),
-    // updatedAt: new Date()
   });
   res.end();
 });

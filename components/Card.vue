@@ -9,7 +9,9 @@
   >
     <b-card-text>...{{ message }}</b-card-text>
 
-    <b-button v-on:click="$emit('next')" href="#" variant="primary">Next</b-button>
+    <b-button v-on:click="$emit('next')" href="#" variant="primary"
+      >Next</b-button
+    >
   </b-card>
 </template>
 
@@ -17,7 +19,6 @@
 import Vue from 'vue';
 
 const Component = Vue.extend({
-  // type inference enabled
   props: {
     message: {
       type: String,
