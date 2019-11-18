@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container>
-      <CardDeck :cards="cards" />
+      <CardDeck :cards="$store.state.cards.cards" />
     </b-container>
     <b-container>
       <b-card>
@@ -29,12 +29,13 @@ export default {
       title: 'Most Likely...'
     };
   },
-  async asyncData() {
+  async fetch({ store, params }) {
     consola.info('fetch');
     const url = process.env.URL || 'http://localhost:3000';
     const res = await axios.get(url + '/api/cards');
-    consola.info(res.data.cards);
-    return { cards: res.data.cards };
+    store.commit('cards/setCards', res.data.cards);
+
+    // return { cards: res.data.cards };
   }
 };
 </script>
