@@ -32,6 +32,11 @@ export default {
       }
     };
   },
+  head() {
+    return {
+      title: 'Add a card...'
+    };
+  },
   methods: {
     async onSubmit(evt) {
       evt.preventDefault();

@@ -24,6 +24,11 @@ export default {
   data() {
     return {};
   },
+  head() {
+    return {
+      title: 'Most Likely...'
+    };
+  },
   async asyncData() {
     consola.info('fetch');
     const url = process.env.URL || 'http://localhost:3000';
