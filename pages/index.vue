@@ -1,6 +1,9 @@
 <template>
   <div>
     <b-container>
+      <b-jumbotron>
+        <h1>Most Likely</h1>
+      </b-jumbotron>
       <CardDeck :cards="$store.state.cards.cards" />
     </b-container>
     <b-container>
@@ -34,8 +37,6 @@ export default {
     const url = process.env.URL || 'http://localhost:3000';
     const res = await axios.get(url + '/api/cards');
     store.commit('cards/setCards', res.data.cards);
-
-    // return { cards: res.data.cards };
   }
 };
 </script>

@@ -6,7 +6,6 @@
 
 <script lang="ts">
 import Card from '@/components/Card.vue';
-const consola = require('consola');
 
 export default {
   components: { Card },
@@ -25,7 +24,6 @@ export default {
   },
   methods: {
     next() {
-      consola.info('hi');
       if (this.$data.current_card >= this.$data.messages.length) {
         this.$data.current_card = 0;
       }

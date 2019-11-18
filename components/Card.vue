@@ -4,14 +4,11 @@
     img-src="https://picsum.photos/300/150/"
     img-alt="Image"
     img-top
-    tag="article"
     class="mx-auto"
   >
     <b-card-text>...{{ message }}</b-card-text>
 
-    <b-button v-on:click="$emit('next')" href="#" variant="primary"
-      >Next</b-button
-    >
+    <b-button v-on:click="$emit('next')" href="#" variant="primary">Next</b-button>
   </b-card>
 </template>
 
