@@ -21,7 +21,7 @@
     "nuxt-edge": "^2.11.0-26246287.dd0b7a8b",
     "pg": "^7.14.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.2",
+    "sequelize": "^6.29.0",
     "sequelize-cli": "^5.5.1",
     "uuid": "^3.3.3"
   },
